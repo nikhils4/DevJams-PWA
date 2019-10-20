@@ -15,16 +15,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.jpg">
 
 
-	<!-- for app startup image in iOS -->
-	<!-- <meta name="apple-mobile-web-app-capable" content="yes" />
-	<link href="/apple_splash_2048.jpg" sizes="2048x2732" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_1668.jpg" sizes="1668x2224" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_1536.jpg" sizes="1536x2048" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_1125.jpg" sizes="1125x2436" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_1242.jpg" sizes="1242x2208" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_750.jpg" sizes="750x1334" rel="apple-touch-startup-image" />
-	<link href="/apple_splash_640.jpg" sizes="640x1136" rel="apple-touch-startup-image" /> -->
-
 	<title>Home</title>
 	<style>
 		.login-input {
@@ -99,7 +89,6 @@
 		document.getElementById("login").addEventListener("click", (e) => {
 			let username = document.getElementById("email");
 			let password = document.getElementById("password");
-
 			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
 			xmlhttp.open("POST", "https://devjams.herokuapp.com/users/login");
 			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -113,8 +102,6 @@
 						localStorage.setItem("email", JSON.parse(xmlhttp.responseText).email);
 						window.location.href = "timeline&map.html"
 					}
-
-
 				}
 			};
 		})

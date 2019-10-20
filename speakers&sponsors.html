@@ -51,6 +51,14 @@
 			color: white;
 		}
 
+		/* .img-container-pre{
+			width : 170px;
+			height : 170px;
+			border : 2px solid black;
+			display: inline-block;
+			margin : 20px 20px 10px 10px
+    } */
+
 		.triangle {
 			width: 0;
 			height: 0;
@@ -59,9 +67,6 @@
 			border-style: solid;
 			border-width: 0 30px 20px 0;
 		}
-
-
-
 		.speaker-cards {
 			width: 90%;
 			height: 270px;
@@ -71,6 +76,7 @@
 		}
 		.sponsor-cards {
 			width: 90%;
+			display: inline-block;
 			position: relative;
 			height: 270px;
 			margin: 20px auto;
@@ -90,6 +96,16 @@
 			font-weight: bolder
 		}
 
+		.scrolling-wrapper {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
+		}
+    .scrolling-wrapper {
+			-webkit-overflow-scrolling: touch;
+		}
+
+
 
 	</style>
 </head>
@@ -98,10 +114,10 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-6" style="margin-top : 40px; padding-left: 50px;" id="timeline">
+			<div class="col-6" style="margin-top : 40px; padding-left: 50px;" id="speakers">
 				Speakers
 			</div>
-			<div class="col-6" style="margin-top: 40px; padding-left: 50px;" id="maps">
+			<div class="col-6" style="margin-top: 40px; padding-left: 50px;" id="sponsors">
 				Sponsors
 			</div>
 			<div class="col-12" id="speakers-section">
@@ -352,63 +368,56 @@
 							</div>
 						</div>
 
-
-						<!-- <div class="speaker-cards" style="padding : 15px">
-							<div class="row">
-								<div class="col-5">
-									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
-								</div>
-								<div class="col-7" style="text-align: right; padding-top : 10px">
-									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
-								</div>
-								<div class="col-12 twitter">
-									// twitter handle
-								</div>
-								<div class="col-12 name">
-									Thiyagaraj T
-								</div>
-								<div class="col-6" style="padding-left : 45px">
-									<div class="circle" style="background-color: red; left : 20%"></div>
-									<span>Design</span>
-								</div>
-								<div class="col-6">
-									// Logo
-								</div>
-							</div>
-						</div> -->
-
-						<!-- <div class="speaker-cards" style="padding : 15px">
-							<div class="row">
-								<div class="col-5">
-									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
-								</div>
-								<div class="col-7" style="text-align: right; padding-top : 10px">
-									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
-								</div>
-								<div class="col-12 twitter">
-									// twitter handle
-								</div>
-								<div class="col-12 name">
-									Thiyagaraj T
-								</div>
-								<div class="col-6" style="padding-left : 45px">
-									<div class="circle" style="background-color: red; left : 20%"></div>
-									<span>Design</span>
-								</div>
-								<div class="col-6">
-									// Logo
-								</div>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
 
 
-			<div class="col-12" id="sponsors-section">
+			<div class="col-12" id="sponsors-section" class="scrolling-wrapper">
 					<div class="sponsor-cards" style="padding : 15px">
-							<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
-						</div>
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+					<div class="sponsor-cards" style="padding : 15px">
+						<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+					</div>
+
 			</div>		
 		</div>
 	</div>
@@ -426,24 +435,6 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
 	</script>
 
-
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
-				.then(function () {
-					console.log('Service Worker Registered');
-				});
-		}
-
-		document.getElementById("skip").addEventListener("click", () => {
-			window.location.href = "home.html";
-		})
-
-		document.getElementById("login").addEventListener("click", () => {
-			window.location.href = "login.html";
-		})
-
-	</script>
 
 </body>
 

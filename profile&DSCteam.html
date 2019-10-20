@@ -377,25 +377,6 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
 	</script>
 
-
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
-				.then(function () {
-					console.log('Service Worker Registered');
-				});
-		}
-
-		document.getElementById("skip").addEventListener("click", () => {
-			window.location.href = "home.html";
-		})
-
-		document.getElementById("login").addEventListener("click", () => {
-			window.location.href = "login.html";
-		})
-
-	</script>
-
 </body>
 
 </html>
