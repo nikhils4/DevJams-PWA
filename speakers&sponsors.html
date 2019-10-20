@@ -27,6 +27,16 @@
 
 	<title>Speakers and Sponsors</title>
 	<style>
+		.circle {
+			height: 15px;
+			width: 15px;
+			top: 50%;
+			left: 0;
+			position: absolute;
+			transform: translate(-55%, -50%);
+			border-radius: 50%
+		}
+
 		.rect {
 			height: 90px;
 			width: 70%;
@@ -46,10 +56,38 @@
 			border-style: solid;
 			border-width: 0 30px 20px 0;
 		}
-		#map {
-			height : 400px;
-			width : 100%
+
+
+
+		.speaker-cards {
+			width: 90%;
+			height: 270px;
+			margin: 20px auto;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius : 5px
 		}
+		.sponsor-cards {
+			width: 90%;
+			position: relative;
+			height: 270px;
+			margin: 20px auto;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius : 5px
+		}
+		
+		.twitter {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 15px;
+		}
+
+		.name {
+			margin-bottom: 15px;
+			font-size: 25px;
+			font-weight: bolder
+		}
+
+
 	</style>
 </head>
 
@@ -63,40 +101,308 @@
 			<div class="col-6" style="margin-top: 40px; padding-left: 50px;" id="maps">
 				Sponsors
 			</div>
-			<div class="col-12" id="timeline-section">
-				<div class="row" style="padding : 60px">
-
-					<div class="col-12" style="border-left : 5px solid black; position: relative;height : 130px">
-						<div class="rect" style="font-weight: bolder; background-color:#007bff;">
-							<div>
-								Speaker
-							</div>
-							<div>
-								1pm to 2pm
-							</div>
-						</div>
-						<div class="triangle" style="border-color: transparent #007bff transparent transparent;"></div>
-					</div>
-
-					<div class="col-12" style="border-left : 5px solid black; position: relative;height : 130px">
+			<div class="col-12" id="speakers-section" style="display: none;">
+				<div class="row" style="padding : 60px 60px 0 60px">
+					<div class="col-4">
 						<div class="circle" style="background-color: green;"></div>
-						<div class="rect" style="font-weight: bolder; background-color:green;">
-							<div>
-								Speaker
-							</div>
-							<div>
-								1pm to 2pm
+						<span>Blah</span>
+					</div>
+					<div class="col-4">
+						<div class="circle" style="background-color: green;"></div>
+						<span>Blah</span>
+					</div>
+					<div class="col-4">
+						<div class="circle" style="background-color: green;"></div>
+						<span>Blah</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12" style="padding : 30px;">
+
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
 							</div>
 						</div>
-						<div class="triangle" style="border-color: transparent green transparent transparent;"></div>
-					</div>
 
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+
+
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+
+						<div class="speaker-cards" style="padding : 15px">
+							<div class="row">
+								<div class="col-5">
+									<img src="./icons/assests/five.png" style="height : 100px; object-fit: cover;">
+								</div>
+								<div class="col-7" style="text-align: right; padding-top : 10px">
+									<img src="./icons/speakers/Thiyaga.png" style="height : 60px">
+								</div>
+								<div class="col-12 twitter">
+									// twitter handle
+								</div>
+								<div class="col-12 name">
+									Thiyagaraj T
+								</div>
+								<div class="col-6" style="padding-left : 45px">
+									<div class="circle" style="background-color: red; left : 20%"></div>
+									<span>Design</span>
+								</div>
+								<div class="col-6">
+									// Logo
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="col-12" id="maps-section">
-				<div id="map"></div>
-			</div>
+
+			<div class="col-12" id="sponsors-section">
+					<div class="sponsor-cards" style="padding : 15px">
+							<img src="./icons/assests/Hackerearth.png" style="width : 100px; position : absolute; transform : translate(-50%, -50%); top : 50%; left : 50%;">
+						</div>
+			</div>		
 		</div>
 	</div>
 
@@ -110,9 +416,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+	</script>
 
 
 	<script>
@@ -131,15 +436,6 @@
 			window.location.href = "login.html";
 		})
 
-		function initMap() {
-			// The location of Uluru
-			var uluru = {lat: -25.344, lng: 131.036};
-			// The map, centered at Uluru
-			var map = new google.maps.Map(
-			document.getElementById('map'), {zoom: 4, center: uluru});
-			// The marker, positioned at Uluru
-			var marker = new google.maps.Marker({position: uluru, map: map});
-		}
 	</script>
 
 </body>
