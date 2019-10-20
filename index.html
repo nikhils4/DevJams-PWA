@@ -27,20 +27,22 @@
 
 	<title>Home</title>
 	<style>
-	.login-input{
-		width : 80%;
-		padding : 10px;
-		border : 1px solid gainsboro;
-		margin-top : 40px;
-		border-radius: 5px;
-	}
-	.login-input:focus {
-		border : 1px solid blue;
-	}
-	button {
-		width : 80%;
-		margin-top : 40px;
-	}
+		.login-input {
+			width: 80%;
+			padding: 10px;
+			border: 1px solid gainsboro;
+			margin-top: 40px;
+			border-radius: 5px;
+		}
+
+		.login-input:focus {
+			border: 1px solid blue;
+		}
+
+		button {
+			width: 80%;
+			margin-top: 40px;
+		}
 	</style>
 </head>
 
@@ -57,48 +59,67 @@
 			<div class="col-12" style="margin-bottom: 100px; height : 100px">
 				// DSC VIT img
 			</div>
-			<div class="col-12">
-				<input type="text" class="login-input" placeholder="Email">
+			<div class="col-12" id="error" style="padding : 20px; color : red; display: none; ">
+				User does not exist!
 			</div>
 			<div class="col-12">
-				<input type="text" class="login-input" placeholder="Password">
+				<input type="text" id="email" class="login-input" placeholder="Email">
 			</div>
 			<div class="col-12">
-				<button class="btn btn-primary">Login</button>
+				<input type="text" id="password" class="login-input" placeholder="Password">
+			</div>
+			<div class="col-12">
+				<button class="btn btn-primary" id="login">Login</button>
 			</div>
 		</div>
 	</div>
 
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-			crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-			crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 
 
 
-		<script>
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/sw.js')
-					.then(function () {
-						console.log('Service Worker Registered');
-					});
-			}
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js')
+				.then(function () {
+					console.log('Service Worker Registered');
+				});
+		}
 
-			document.getElementById("skip").addEventListener("click", () => {
-				window.location.href = "home.html";
-			})
 
-			document.getElementById("login").addEventListener("click", () => {
-				window.location.href = "login.html";
-			})
-		</script>
-		<script src="./ios-popup.js"></script>
+		document.getElementById("login").addEventListener("click", (e) => {
+			let username = document.getElementById("email");
+			let password = document.getElementById("password");
+
+			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+			xmlhttp.open("POST", "https://devjams.herokuapp.com/users/login");
+			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			xmlhttp.send(JSON.stringify({ "email": username.value, "password": password.value, "device_id": "52uy3tvga6uvdg23di7wevgjgiuy" }));
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					if (JSON.parse(xmlhttp.responseText). message == "User does not exist"){
+						document.getElementById("error").style.display = "block"
+					} else {
+						localStorage.setItem("token", JSON.parse(xmlhttp.responseText).token);
+						localStorage.setItem("email", JSON.parse(xmlhttp.responseText).email);
+						window.location.href = "timeline&map.html"
+					}
+
+
+				}
+			};
+		})
+	</script>
+	<script src="./ios-popup.js"></script>
 
 </body>
 
