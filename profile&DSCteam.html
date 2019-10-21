@@ -60,9 +60,9 @@
 
 			<div class="col-12" id="profile-section">
 				<div class="row" style="padding : 40px 20px 90px 20px;margin-bottom: 20px">
-					<div class="col-12" style="margin-top : 20px; margin-bottom : 10px; font-weight: bolder; ">
+					<!-- <div class="col-12" style="margin-top : 20px; margin-bottom : 10px; font-weight: bolder; ">
 						Full Name
-					</div>
+					</div> -->
 					<div class="col-12" style="margin-bottom : 20px">
 						<span id="getname"></span>
 					</div>
@@ -76,11 +76,11 @@
 						QR Code
 					</div>
 					<div class="col-12" style="margin-bottom : 20px">
-						<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=nikhilsingh"
+						<img id="qr"
 							style="height : 200px">
 					</div>
 					<div class="col-12" style="margin-top : 25px">
-						<button class="btn btn-danger">Logout</button>
+						<button id="logout" class="btn btn-danger">Logout</button>
 					</div>
 				</div>
 			</div>
@@ -553,6 +553,13 @@
 
 
 	<script>
+		var x = window.localStorage.getItem("email");
+		document.getElementById("getemail").innerHTML = window.localStorage.getItem("email");
+		document.getElementById("qr").setAttribute('src',`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${x}`);
+		document.getElementById("logout").addEventListener('click',()=>{
+			window.localStorage.removeItem("token");
+			window.location.href = "index.html";
+		})
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/sw.js')
 				.then(function () {

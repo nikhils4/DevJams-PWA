@@ -88,6 +88,7 @@
 
 		document.getElementById("login").addEventListener("click", (e) => {
 			let username = document.getElementById("email");
+			localStorage.setItem("email", JSON.parse(xmlhttp.responseText).token);
 			let password = document.getElementById("password");
 			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
 			xmlhttp.open("POST", "https://devjams.herokuapp.com/users/login");
